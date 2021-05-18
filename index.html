@@ -14,19 +14,16 @@
 
   <header class="navbar">
     <h1 class="navbar__title">calc</h1>
-    <div class="navbar__display">
+    <div class="navbar__display" id="navbar__display">
       <p class="navbar__display__subtitle" >THEME</p>
-      <label class="navbar__display__input" for="first__display">
-        <input class="navbar__display__input__select" type="radio" name="interface" value="1" checked> 1
-      </label>
-
-      <label class="navbar__display__input" for="seconde__display">
-        <input class="navbar__display__input__select" type="radio" name="interface" value="2"> 2
-      </label>
-
-      <label class="navbar__display__input" for="third__display">
-        <input class="navbar__display__input__select" type="radio" name="interface" value="3"> 3
-      </label>
+      <div class="navbar__display__input" onclick="switchTheme()">
+        <p class="navbar__display__input__text">1</p>
+        <p class="navbar__display__input__text">2</p>
+        <p class="navbar__display__input__text">3</p>
+        <div class="navbar__display__input__slider">
+          <div class="navbar__display__input__slider__circle" id="slider__circle"></div>
+        </div>
+      </div>
     </div>
   </header>
   <main>
@@ -50,20 +47,21 @@
       <button class="button__input" onclick="input(3)">3</button>
       <button class="button__input" onclick="inputSign('-')">-</button>
 
-      <button class="button__input" onclick="input(',')">.</button>
+      <button class="button__input" onclick="input('.')">.</button>
       <button class="button__input" onclick="input(0)">0</button>
       <button class="button__input" onclick="inputSign('/')">/</button>
       <button class="button__input" onclick="inputSign('*')">x</button>
 
       <button class="button__input button__input--reset" onclick="reset()">RESET</button>
-      <button class="button__input button__input--equal" onclick="result()">=</button>
+      <button class="button__input button__input--equal" id="btn-equal" onclick="result()">=</button>
     </div>
   </main>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/mithivi">Mathias G.</a>.
+    Coded by <a href="https://github.com/mithivi">Mathias G</a>.
   </div>
   <script src="./src/js/calc.js"></script>
+  <script src="./src/js/theme.js"></script>
 </body>
 </html>

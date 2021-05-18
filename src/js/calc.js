@@ -13,7 +13,7 @@ display(INPUT_NUMBER);
 
 const input = (input) => {
   if (INPUT_NUMBER !== "0") INPUT_NUMBER = INPUT_NUMBER + input;
-  if (input === ",") INPUT_NUMBER = INPUT_NUMBER + input;
+  if (input === ".") INPUT_NUMBER = INPUT_NUMBER + input;
   if (INPUT_NUMBER === "0" || CALC === true) INPUT_NUMBER = String(input);
   CALC = false;
 
